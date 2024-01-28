@@ -1,16 +1,16 @@
-//RANDOM - 1(BINARY SEARCH)
+//OPTIMISED - 1(BINARY SEARCH)
 
 class Pair{
     int val; 
     int sid;
 
-    public Pair(int val, int sid){
-        this.val = val; 
-        this.sid = sid; 
+    public Pair(int sid, int val){
+        this.sid = sid;
+        this.val = val;
     }
 }
 class SnapshotArray {
-    HashMap<Integer, List<Pair>>map; 
+    HashMap<Integer, List<Pair>> map; 
     int snapId; 
 
     public SnapshotArray(int length) {
@@ -18,7 +18,7 @@ class SnapshotArray {
         snapId = 0;
 
         for(int i=0; i<length; i++){
-            List<Pair>list = new ArrayList<>(); 
+            List<Pair> list = new ArrayList<>(); 
             list.add(new Pair(0, 0)); 
             map.put(i, list); 
         }
@@ -26,7 +26,7 @@ class SnapshotArray {
     }
     
     public void set(int index, int val) {
-        List<Pair>list = map.get(index);
+        List<Pair> list = map.get(index);
         int n = list.size(); 
 
         if(list.get(n-1).sid == snapId){
@@ -34,7 +34,7 @@ class SnapshotArray {
             p.val = val; 
         }
         else{
-             list.add(new Pair(val, snapId)); 
+             list.add(new Pair(snapId, val)); 
         }
          
         map.put(index, list);  
@@ -46,18 +46,19 @@ class SnapshotArray {
     }
     
     public int get(int index, int snap_id) {
-        List<Pair>list = map.getOrDefault(index, new ArrayList<>());
-        return bs(list, snap_id);  
+        List<Pair> list = map.get(index);
+        return binarySearch(list, snap_id);  
     }
-
-    public int bs(List<Pair>list, int key){
+    //BINARY SEARCH
+    public int binarySearch(List<Pair>list, int key){
         int low = 0; 
         int high = list.size()-1; 
         int ans = -1; 
 
         while(low <= high){
             int mid = low + (high - low)/2; 
-            Pair p = list.get(mid); 
+            Pair p = list.get(mid);
+            
             if(p.sid == key){
                 return p.val; 
             }
@@ -72,34 +73,3 @@ class SnapshotArray {
         return ans; 
     }
 }
-
-// //BRUTE FORCE - 1(ARRAYLIST)
-
-// class SnapshotArray {
-//     int[] arr;
-//     int snap;
-//     List<List<Integer>> snapList;
-
-//     public SnapshotArray(int length) {
-//         arr = new int[length];
-//         snapList = new ArrayList<>();
-//     }
-    
-//     public void set(int index, int val) {
-//         arr[index] = val;
-//     }
-    
-//     public int snap() {
-//         List<Integer> temp = new ArrayList<>();
-//         for(int i: arr){
-//             temp.add(i);
-//         }
-//         snapList.add(temp);
-//         snap++;
-//         return snap-1;
-//     }
-    
-//     public int get(int index, int snap_id) {
-//         return snapList.get(snap_id).get(index);
-//     }
-// }
