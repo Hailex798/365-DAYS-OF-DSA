@@ -1,20 +1,29 @@
-//OPTIMISED - 1(BINARY SEARCH: JLDI JLDI)
+//OPTIMISED - 1(BINARY SEARCH : FIND PIVOT + 1 ELEMENT)
 
 class Solution {
     public int findMin(int[] nums) {
-        int low = 0;
-        int high = nums.length - 1;
+        int pivot = -1;
+        int len = nums.length;
         
-        while(low < high){
+        int low = 0;
+        int high = len - 1;
+        
+        while(low <= high){
             int mid = low + (high-low)/2;
             
-            if(nums[mid] > nums[high]){
+            if(mid < high && nums[mid] > nums[mid+1]){
+                pivot = mid;
+                break;
+            }else if(mid > low && nums[mid-1] > nums[mid]){
+                pivot = mid - 1;
+                break;
+            }else if(nums[mid] > nums[low]){
                 low = mid + 1;
             }else{
-                high = mid;
+                high = mid - 1;
             }
         }
         
-        return nums[low];
+        return nums[(pivot+1)%len];
     }
 }
