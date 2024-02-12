@@ -1,20 +1,21 @@
-//BRUTE FORCE - 1(HASHMAP)
+//BRUTE FORCE - 2(SORTING)
 
 class Solution {
     public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
         int len = nums.length;
-        Map<Integer, Integer> map = new HashMap<>();
+        if(len < 2) return nums[0];
+        int count = 1;
         
-        //STORING FREQ
-        for(int i: nums){
-            map.put(i, map.getOrDefault(i, 0) + 1);
+        for(int i=1 ; i<len ; i++){
+            if(nums[i] == nums[i-1]){
+                count++;
+                if(count > len/2) return nums[i];
+            }else{
+                count = 1;
+            }
         }
         
-        //GETTING [n/2] ELEMENT
-        for(int i: nums){
-            if(map.get(i) > len/2) return i;
-        }
-        
-        return 0;
+        return -1;
     }
 }
