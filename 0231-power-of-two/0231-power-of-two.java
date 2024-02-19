@@ -1,7 +1,16 @@
-//OPTIMISED - 2(BIT MANIPULATION)
+//OPTIMISED - 1(BIT MANIPULATION)
 
 class Solution {
     public boolean isPowerOfTwo(int n) {
-        return n > 0 && (n & (n-1)) == 0 ? true : false;
+        if(n <= 0) return false;
+        int ones = 0;
+        
+        while(n > 0){
+            if((n&1) == 1) ones++;
+            if(ones > 1) return false;
+            n >>= 1;
+        }
+        
+        return ones > 1 ? false : true;
     }
 }
