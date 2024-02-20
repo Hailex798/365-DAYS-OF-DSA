@@ -1,16 +1,10 @@
-//BRUTE FORCE - 1(SORTING)
+//OPTIMISED - 1(SUM OF N NATURAL NO.)
 
 class Solution {
     public int missingNumber(int[] nums) {
         int len = nums.length;
-        Arrays.sort(nums);
         
-        for(int i=0 ; i<len ; i++){
-            if(nums[i] != i){
-                return i;
-            }
-        }
         
-        return len;
+        return (len*(len+1)/2) - Arrays.stream(nums).sum();
     }
 }
