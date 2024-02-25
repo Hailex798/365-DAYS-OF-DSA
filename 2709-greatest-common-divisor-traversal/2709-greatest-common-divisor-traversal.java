@@ -1,83 +1,68 @@
-//COPY - 1(GRAPHS \U0001f613 + no proper video)
-
 class Solution {
+    int[] parent;
+    public void union(int i, int j) {
+        int parentI = find(i), parentJ = find(j);
+        if(parentI < parentJ) {
+            parent[parentJ] = parentI;
+        } else {
+            parent[parentI] = parentJ;
+        }
+    }
+    public int find(int i) {
+        int root = i;
+        while(parent[root] != root) {
+            root = parent[root];
+        }
+        while(parent[i] != root) {
+            int tmp = parent[i];
+            parent[i] = root;
+            i = tmp;
+        }
+        return root;
+    }
     public boolean canTraverseAllPairs(int[] nums) {
-        int MAX = 100000;
-        int N = nums.length;
-        boolean[] has = new boolean[MAX + 1];
-        for (int x: nums) {
-            has[x] = true;
-        }
-
-        // edge cases
-        if (N == 1) {
-            return true;
-        }
-        if (has[1]) {
-            return false;
-        }
-
-        // the general solution
-        int[] sieve = new int[MAX + 1];
-        for (int d = 2; d <= MAX; d++) {
-            if (sieve[d] == 0) {
-                for (int v = d; v <= MAX; v += d) {
-                    sieve[v] = d;
+        Map<Integer, List<Integer>> map = new HashMap<>();
+        int n = nums.length;
+        for(int i=0;i<n;i++) {
+            int num = nums[i];
+            if(num % 2 == 0) {
+                List<Integer> list = map.getOrDefault(2, new ArrayList<>());
+                list.add(i);
+                map.put(2, list);
+                while(num % 2 == 0) {
+                    num /= 2;
                 }
             }
-        }
-
-        DSU union = new DSU(2 * MAX + 1);
-        for (int x: nums) {
-            int val = x;
-            while (val > 1) {
-                int prime = sieve[val];
-                int root = prime+MAX;
-                if (union.find(root) != union.find(x)) {
-                    union.merge(root, x);
-                }
-                while (val % prime == 0) {
-                    val /= prime;
+            for(int p=3;p*p<=num;p+=2) {
+                if(num % p == 0) {
+                    List<Integer> list = map.getOrDefault(p, new ArrayList<>());
+                    list.add(i);
+                    map.put(p, list);
+                    while(num % p == 0) {
+                        num /= p;
+                    }
                 }
             }
-        }
-
-        int cnt = 0;
-        for (int i=2; i <= MAX; i++) {
-            if (has[i] && union.find(i) == i) {
-                cnt++;
+            if(num != 1) {
+                List<Integer> list = map.getOrDefault(num, new ArrayList<>());
+                list.add(i);
+                map.put(num, list);
             }
         }
-        return cnt == 1;
-    }
-}
-class DSU {
-    public int[] dsu;
-    public int[] size;
-
-    public DSU(int N) {
-        dsu = new int[N + 1];
-        size = new int[N + 1];
-        for (int i = 0; i <= N; i++) {
-            dsu[i] = i;
-            size[i] = 1;
+        parent = new int[n];
+        for(int i=0;i<n;i++) {
+            parent[i] = i;
         }
-    }
-    public int find(int x) {
-        return dsu[x] == x ? x : (dsu[x] = find(dsu[x]));
-    }
-    public void merge(int x, int y) {
-        int fx = find(x);
-        int fy = find(y);
-        if (fx == fy){
-            return;
+        for(int p: map.keySet()) {
+            List<Integer> list = map.getOrDefault(p, new ArrayList<>());
+            int size = list.size();
+            for(int i=0;i<size-1;i++) {
+                union(list.get(i), list.get(i+1));
+            }
         }
-        if (size[fx] > size[fy]) {
-            int temp = fx;
-            fx = fy;
-            fy = temp;
+        for(int i=0;i<n;i++) {
+            if(find(i) != 0) return false;
         }
-        dsu[fx] = fy;
-        size[fy] += size[fx];
+        return true;
     }
 }
