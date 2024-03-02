@@ -1,14 +1,24 @@
-//OPTIMISED - 1(LIST: STREAMS)
+//OPTIMISED - 1(TWO POINTERS: )
 
 class Solution {
     public int[] sortedSquares(int[] nums) {
-        List<Integer> list = new ArrayList<>();
+        int low = 0;
+        int len = nums.length;
+        int[] ans = new int[len];
+        int high = len - 1;
+        int x = len - 1;
         
-        for(int i: nums){
-            list.add(i*i);
+        while(low <= high){
+            if(nums[low]*nums[low] > nums[high]*nums[high]){
+                ans[x] = nums[low]*nums[low];
+                low++;
+            }else{
+                ans[x] = nums[high]*nums[high];
+                high--;
+            }
+            x--;
         }
-        Collections.sort(list);
         
-        return list.stream().mapToInt(i->i).toArray();
+        return ans;
     }
 }
