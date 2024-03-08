@@ -1,32 +1,22 @@
-//BRUTE FORCE - 1(DOUBLE FOR)
+//OPTIMISED - 1(HASHMAP)
 
 class Solution {
     public int maxFrequencyElements(int[] nums) {
-        int max = Integer.MIN_VALUE;
+        Map<Integer, Integer> map = new HashMap<>();
+        int max = 0;
         
-        //FINDING MAX FREQUENCY
-        for(int i=0 ; i<nums.length ; i++){
-            int freq = 0;
-            for(int j=0 ; j<nums.length ; j++){
-                if(nums[i] == nums[j]){
-                    freq++;
-                }
-            }
-            max = Math.max(max, freq);
+        // MAPPING FREQ
+        for(int i: nums){
+            map.put(i, map.getOrDefault(i, 0)+1);
+            max = Math.max(max, map.get(i));
         }
         
-        //FINDING TOTAL NO. WITH SAME FREQUENCY
+        //FINDING ELEMENTS WITH SAME FREQ
         int tot = 0;
-        for(int i=0 ; i<nums.length ; i++){
-            int freq = 0;
-            for(int j=i ; j<nums.length ; j++){
-                if(nums[i] == nums[j]){
-                    freq++;
-                }
-            }
-            if(freq == max) tot++;
+        for(int i: map.keySet()){
+            if(max == map.get(i)) tot++;
         }
         
-        return max*tot;
+        return tot*max;
     }
 }
