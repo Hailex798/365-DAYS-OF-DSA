@@ -1,9 +1,9 @@
-//BRUTE FORCE - 1(HASHMAP + FREQ ARRAY)
+//OPTIMISED - 1(HASHMAP + FREQ ARRAY + STRINGBUILDER)
 
 class Solution {
     public String customSortString(String order, String s) {
         Map<Character, Integer> map = new HashMap<>();
-        String ans = "";
+        StringBuilder ans = new StringBuilder("");
         int[] freq = new int[26];
         
         //MAPPING FREQ FOR STRING --> S
@@ -16,7 +16,7 @@ class Solution {
             if(map.containsKey(c)){
                 int x = map.get(c);
                 while(x > 0){
-                    ans += c;
+                    ans.append(c);
                     x--;
                 }
                 map.remove(c);
@@ -29,16 +29,16 @@ class Solution {
                 freq[c - 'a'] = map.get(c);
             }
         }else{
-            return ans;
+            return ans.toString();
         }
         System.out.println(ans);
         for(int i=0 ; i<26 ; i++){
             while(freq[i] > 0){
-                ans += (char)(i + 'a');
+                ans.append((char)(i + 'a'));
                 freq[i]--;
             }
         }
         
-        return ans;
+        return ans.toString();
     }
 }
