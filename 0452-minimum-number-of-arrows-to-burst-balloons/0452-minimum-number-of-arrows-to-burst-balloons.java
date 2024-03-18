@@ -1,4 +1,4 @@
-//BRUTE FORCE - 1(INTERVALS ??)
+//OPTIMISED - 1(INTERVALS ??)
 
 class Solution {
     public int findMinArrowShots(int[][] points) {
