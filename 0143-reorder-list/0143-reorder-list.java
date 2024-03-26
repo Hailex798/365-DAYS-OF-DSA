@@ -7,11 +7,17 @@ class Solution {
         middle = reverse(middle);
         ListNode ptr = head;
         
-        while(middle != null){
+        while(ptr != null || middle != null){
+            if(ptr.next == null){
+                ptr.next = middle;
+                break;
+            }
             ListNode nxt = ptr.next;
+            ListNode nxt2 = middle.next;
             ptr.next = middle;
-            ptr = middle;
-            middle = nxt;
+            middle.next = nxt;
+            ptr = nxt;
+            middle = nxt2;
         }
     }
     
