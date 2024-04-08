@@ -1,31 +1,35 @@
 class Solution {
     public int countStudents(int[] students, int[] sandwiches) {
-        int len = students.length; // Sandwiches will be the same length
-        Queue<Integer> studentQueue = new LinkedList<>();
-        Stack<Integer> sandwichStack = new Stack<>();
-        
-        // Add students and sandwiches to the queue and stack
-        for (int i = 0; i < len; i++) {
-            sandwichStack.push(sandwiches[len - i - 1]);
-            studentQueue.offer(students[i]);
-        }
+        int circleStudentCount = 0;
+        int squareStudentCount = 0;
 
-        // Simulate the lunch process by serving sandwiches 
-        // or sending students to the back of the queue.
-        int lastServed = 0;
-        while (studentQueue.size() > 0 && lastServed < studentQueue.size()) {
-            if (sandwichStack.peek() == studentQueue.peek()) {
-                sandwichStack.pop(); // Serve sandwich
-                studentQueue.poll(); // Student leaves queue
-                lastServed = 0;
+        // Count the number of students who want each type of sandwich
+        for (int student : students) {
+            if (student == 0) {
+                circleStudentCount++;
             } else {
-                // Student moves to back of queue
-                studentQueue.offer(studentQueue.poll()); 
-                lastServed++;
+                squareStudentCount++;
             }
         }
 
-        // Remaining students in queue are unserved students
-        return studentQueue.size();    
+        // Serve sandwiches to students
+        for (int sandwich : sandwiches) {
+            // No student wants the circle sandwich on top of the stack
+            if (sandwich == 0 && circleStudentCount == 0) {
+                return squareStudentCount;
+            }
+            // No student wants the square sandwich on top of the stack
+            if (sandwich == 1 && squareStudentCount == 0) {
+                return circleStudentCount;
+            }
+            // Decrement the count of the served sandwich type
+            if (sandwich == 0) {
+                circleStudentCount--;
+            } else {
+                squareStudentCount--;
+            }
+        }
+        // Every student received a sandwich
+        return 0;
     }
 }
