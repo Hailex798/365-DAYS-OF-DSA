@@ -1,17 +1,21 @@
+//OPTIMISED - 1(DFS)
+
 class Solution {
-    public int sumNumbers(TreeNode root) {
-        return dfs(root, 0);
+    public int sumNumbers(TreeNode node){
+        return dfs(node, 0);
     }
     
-    private int dfs(TreeNode node, int pathSum) {
-        if (node == null)
+    public int dfs(TreeNode root, int pthSum) {
+        if(root == null){
             return 0;
+        }
         
-        pathSum = pathSum * 10 + node.val;
+        pthSum = pthSum * 10 + root.val;
         
-        if (node.left == null && node.right == null)
-            return pathSum;
+        if(root.left == null && root.right == null){
+            return pthSum;
+        }
         
-        return dfs(node.left, pathSum) + dfs(node.right, pathSum);
+        return dfs(root.left, pthSum) + dfs(root.right, pthSum);
     }
 }
