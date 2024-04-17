@@ -1,16 +1,16 @@
-//OPTIMISED - 1(DFS)
+//OPTIMISED - 1.2(DFS)
 
 class Solution {
-    String smallest = "";
     public String smallestFromLeaf(TreeNode root) {
-        dfs(root, "");
+        String smallest = "";
+        smallest = dfs(root, "", smallest);
         
         return smallest;
     }
     
-    public void dfs(TreeNode node, String curr){
+    public String dfs(TreeNode node, String curr, String smallest){
         if(node == null){
-            return ;
+            return smallest;
         }
         
         curr = (char)(node.val + 'a') + curr;
@@ -20,11 +20,9 @@ class Solution {
                 smallest = curr;
             }
         }
-        if(node.left != null){
-            dfs(node.left, curr);
-        }
-        if(node.right != null){
-            dfs(node.right, curr);
-        }
+        smallest = dfs(node.left, curr, smallest);
+        smallest = dfs(node.right, curr, smallest);
+        
+        return smallest;
     }
 }
