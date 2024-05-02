@@ -1,18 +1,23 @@
-//BRUTE FORCE - 1(SORTING)
+//OPTIMISED - 1(HASHMAP)
 
 class Solution {
     public int findMaxK(int[] nums) {
-        Arrays.sort(nums);
+        Set<Integer> set = new HashSet<>();
         
-        int i = 0;
-        int j = nums.length - 1;
-        
-        while(i<j){
-            if(nums[i] < 0 && nums[j] == Math.abs(nums[i])) return nums[j];
-            else if(nums[j] > Math.abs(nums[i])) j--;
-            else i++;
+        //ADDING -VE VALUES TO HASHSET
+        for(int i: nums){
+            if(i < 0) set.add(i);
         }
         
-        return -1;
+        int max = -1;
+        for(int i=0 ; i<nums.length ; i++){
+            if(nums[i] > 0){
+                if(nums[i] > max && set.contains(-nums[i])){
+                    max = nums[i];
+                }
+            }
+        }
+        
+        return max;
     }
 }
