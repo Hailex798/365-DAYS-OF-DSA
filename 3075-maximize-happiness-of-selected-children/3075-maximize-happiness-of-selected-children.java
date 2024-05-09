@@ -1,24 +1,17 @@
-//OPTIMISED - 1(BACK POINTER)
+//OPTIMISED - 1(BACK-POINTER)
 
 class Solution {
     public long maximumHappinessSum(int[] happiness, int k) {
-        long h = 0;
-        int len = happiness.length;
         Arrays.sort(happiness);
-        long x = 0;
+        int i = 0;
+        int p = happiness.length - 1;
+        long sel = 0;
         
-        int i = len-1;
-        while(k > 0 && i >= 0){
-            if(happiness[i] - x > 0){
-                h += happiness[i] - x;
-                x++;
-                i--;
-                k--;
-            }else{
-                return h;
-            }
+        while(k-- > 0 && happiness[p]-i > 0){
+            sel += happiness[p--] - i;
+            i++;
         }
         
-        return h;
+        return sel;
     }
 }
