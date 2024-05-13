@@ -1,47 +1,47 @@
+//OPTIMISED - 1(SIMULATION)
+
 class Solution {
     public int matrixScore(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
-
-        // Set first column
-        for (int i = 0; i < m; i++) {
-            if (grid[i][0] == 0) {
-                // Flip row
-                for (int j = 0; j < n; j++) {
-                    grid[i][j] = 1 - grid[i][j];
+        int rows = grid.length;
+        
+        for(int i=0 ; i<grid[0].length ; i++){
+            int zeroes = 0;
+            for(int j=0 ; j<rows ; j++){
+                if(i == 0 && grid[j][i] == 0){
+                    togRow(grid, j);
+                }else if(grid[j][i] == 0){
+                    zeroes++;
                 }
+            }
+            //TOGGLING COLUMNS
+            if(zeroes > (rows - zeroes)){
+                togCol(grid, i);
             }
         }
-
-        // Optimize columns except first column
-        for (int j = 1; j < n; j++) {
-            int countZero = 0;
-            // Count zeros
-            for(int i = 0; i < m; i++) {
-                if(grid[i][j] == 0) {
-                    countZero++;
-                }
-            }
-            // Flip the column if there are more zeros for better score
-            if(countZero > m-countZero) {
-                for(int i = 0; i < m; i++) {
-                    grid[i][j] = 1 - grid[i][j];
-                }
-            }
-        }
-
-        // Calculate the final score considering bit positions
+        
+        //CALCULATING SCORES
         int score = 0;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                // Left shift bit by place value of column to find column contribution
-                int columnScore = grid[i][j] << (n - j - 1);
-                // Add contribution to score
-                score += columnScore;
+        
+        for(int i=0 ; i<rows ; i++){
+            int pow = 0;
+            for(int j=grid[0].length-1 ; j>=0 ; j--){
+                score += Math.pow(2, pow++) * grid[i][j];
+                System.out.println(score);
             }
         }
-
-        // return final result
+        
         return score;
+    }
+    public void togRow(int[][] grid, int r){
+        //TOGGLING VALUES
+        for(int i=0 ; i<grid[0].length ; i++){
+            grid[r][i] ^= 1;
+        }
+    }
+    public void togCol(int[][] grid, int c){
+        //TOGGLING VALUES
+        for(int i=0 ; i<grid.length ; i++){
+            grid[i][c] ^= 1;
+        }
     }
 }
