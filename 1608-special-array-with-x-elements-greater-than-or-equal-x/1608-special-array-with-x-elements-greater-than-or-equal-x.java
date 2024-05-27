@@ -1,31 +1,20 @@
-//OPTIMISED - 1(SORTING)
+//OPTIMISED - 2(PREFIX-SUM + COUNTING)
 
 class Solution {
     public int specialArray(int[] nums) {
         Arrays.sort(nums);
-        int len = nums.length;
+        int[] freq = new int[nums.length+1];
         
-        for(int x=1 ; x<=len ; x++){
-            int low = 0;
-            int high = nums.length - 1;
-            int index = -1;
-
-            //FINDING THE FIRST OCCURRENCE
-            while(low <= high){
-                int mid = low + (high-low)/2;
-
-                if((mid == 0 || nums[mid-1] < x) && nums[mid] == x){
-                    index = mid;
-                    break;
-                }else if(nums[mid] < x){
-                    low = mid + 1;
-                }else{
-                    high = mid - 1;
-                }
-            }
-            if(index == -1) index = low;
-            
-            if(len-index == x) return x;
+        //MAPPING FREQUENCIES
+        for(int i: nums){
+            freq[Math.min(nums.length, i)]++;
+        }
+        
+        //CHECKING IF X ELEMENTS >= TO X VALUE
+        int pSum = 0;
+        for(int i=nums.length ; i>=1 ; i--){
+            pSum += freq[i];
+            if(pSum == i) return i;
         }
         
         return -1;
