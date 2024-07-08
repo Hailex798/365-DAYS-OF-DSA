@@ -1,18 +1,17 @@
 class Solution {
-
     public int numWaterBottles(int numBottles, int numExchange) {
-        int consumedBottles = 0;
-
-        while (numBottles >= numExchange) {
-            // Consume numExchange full bottles.
-            consumedBottles += numExchange;
-            numBottles -= numExchange;
-
-            // Exchange them for one full bottle.
-            numBottles++;
+        int sum = 0;
+        int extra = 0;
+        int bott = 0;
+        
+        while(numBottles > 0){
+            sum += numBottles;
+            numBottles += extra;
+            bott = numBottles;
+            numBottles /= numExchange;
+            extra = bott % numExchange;
         }
-
-        // Consume the remaining numBottles (<numExchange).
-        return consumedBottles + numBottles;
+        
+        return sum;
     }
 }
