@@ -1,4 +1,4 @@
-//OPTIMISED - 2(SORTING)
+//BF - 1(SORTING)
 
 class Solution {
     public int findDuplicate(int[] nums) {
