@@ -1,33 +1,33 @@
+//OPTIMISED - 1(CUSTOMISED SORTING: LAMBDA FUNCTION)
+
 class Solution {
-
     public int[] frequencySort(int[] nums) {
-        Map<Integer, Integer> freq = new HashMap<>();
-        for (int num : nums) {
-            freq.put(num, freq.getOrDefault(num, 0) + 1);
+        int len = nums.length;
+        Map<Integer, Integer> map = new HashMap<>();
+        
+        for(int i: nums){
+            map.put(i, map.getOrDefault(i, 0) + 1);
         }
-
-        // Java's Arrays.sort method doesn't directly support
-        // sorting primitive arrays (int[]) with a lambda comparator.
-        // We can convert the primitive int into Integer objects
-        // to get around this limitation.
-        Integer[] numsObj = new Integer[nums.length];
-        for (int i = 0; i < nums.length; i++) {
+        
+        //MAKING NUMS OBJECT FOR LAMBDA SORTING FUNC
+        Integer[] numsObj = new Integer[len];
+        
+        for(int i=0 ; i<len ; i++){
             numsObj[i] = nums[i];
         }
-
+        
         Arrays.sort(numsObj, (a, b) -> {
-            if (freq.get(a).equals(freq.get(b))) {
+            if(map.get(a) == map.get(b)){
                 return Integer.compare(b, a);
             }
-            return Integer.compare(freq.get(a), freq.get(b));
+            
+            return Integer.compare(map.get(a), map.get(b));
         });
-
-        // Convert numsObj back to a primitive array to match
-        // return type.
-        for (int i = 0; i < nums.length; i++) {
+        
+        for(int i=0 ; i<len ; i++){
             nums[i] = numsObj[i];
         }
-
-        return nums;
+        
+        return nums;        
     }
 }
