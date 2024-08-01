@@ -5,10 +5,7 @@ class Solution {
         int older = 0;
         
         for(String i: details){
-            int x = Integer.valueOf(i.charAt(11) - '0');
-            x = x*10 + Integer.valueOf(i.charAt(12) - '0');
-            System.out.println(x);
-            if(x > 60) older++;
+            if(((i.charAt(11) - '0')*10 + (i.charAt(12) - '0')) > 60) older++;
         }
         
         return older;
