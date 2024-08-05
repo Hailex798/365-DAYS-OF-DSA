@@ -1,24 +1,18 @@
-//BRUTE FORCE - 1(DOUBLE-ITERATION)
+//OPTIMISED - 1(HASHMAP)
 
 class Solution {
     public String kthDistinct(String[] arr, int k) {
-        int len = arr.length;
+        Map<String, Integer> map = new HashMap<>();
         
-        for(int i=0 ; i<len ; i++){
-            String dis = arr[i];
-            boolean unique = true;
-            
-            for(int j=i+1 ; j<len ; j++){
-                if(arr[j].equals(dis)){
-                    arr[j] = "";
-                    unique = false;
-                }
-            }
-            
-            if(unique && !dis.equals("")){
+        for(String s: arr){
+            map.put(s, map.getOrDefault(s, 0) + 1);
+        }
+        
+        for(String s: arr){
+            if(map.get(s) == 1){
                 k--;
+                if(k == 0) return s;
             }
-            if(k == 0) return dis;
         }
         
         return "";
