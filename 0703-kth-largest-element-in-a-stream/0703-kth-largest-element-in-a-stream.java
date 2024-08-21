@@ -14,12 +14,30 @@ class KthLargest {
     }
     
     public int add(int val) {
-        stream.add(val);
-        Collections.sort(stream);
+        stream.add(getIndex(val), val);
         
         int ans = stream.get(stream.size() - this.k);
         
         return ans;
+    }
+    
+    public int getIndex(int val){
+        int low = 0;
+        int high = stream.size() - 1;
+        
+        while(low <= high){
+            int mid = low + (high-low)/2;
+            
+            if(stream.get(mid) == val) return mid;
+            
+            if(stream.get(mid) > val){
+                high = mid-1;
+            }else if(stream.get(mid) < val){
+                low = mid + 1;
+            }
+        }
+        
+        return low;
     }
 }
 
