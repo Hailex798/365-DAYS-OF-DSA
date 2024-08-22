@@ -1,9 +1,11 @@
-//OPTIMISED - 1(METHODS)
+//OPTIMISED - 2(METHODS...)
 
 class Solution {
     public int findComplement(int num) {
         int mask = Integer.highestOneBit(num);
         
-        return num ^ (2*mask - 1);
+        mask |= (mask-1);
+        
+        return num ^ mask;
     }
 }
