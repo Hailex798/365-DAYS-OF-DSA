@@ -1,11 +1,14 @@
-//OPTIMISED - 2(METHODS...)
+//OPTIMISED - 3(BIT COUNT)
 
 class Solution {
-    public int findComplement(int num) {
-        int mask = Integer.highestOneBit(num);
+    public int findComplement(int num){
+        String ans = "";
+        String str = Integer.toBinaryString(num);
         
-        mask |= (mask-1);
+        for(int i=str.length()-1 ; i>=0 ; i--){
+            ans = ((str.charAt(i) - '0') ^ 1) + ans;
+        }
         
-        return num ^ mask;
+        return Integer.parseInt(ans, 2);
     }
 }
