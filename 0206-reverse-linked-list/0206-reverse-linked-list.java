@@ -1,17 +1,17 @@
-//OPTIMISED - 1(TWO-POINTERS)
+//OPTIMISED - 1(THREE-POINTERS)
 
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
-        
+
         while(curr != null){
             ListNode nxt = curr.next;
             curr.next = prev;
             prev = curr;
             curr = nxt;
         }
-        
+
         return prev;
     }
 }
