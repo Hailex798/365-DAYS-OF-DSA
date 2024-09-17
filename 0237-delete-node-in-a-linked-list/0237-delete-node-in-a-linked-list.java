@@ -1,16 +1,9 @@
-//OPTIMISED - 1(TWO-POINTERS)
+//OPTIMISED - 1(copy next + changet next node)
 
 class Solution {
     public void deleteNode(ListNode node) {
-        ListNode left = node;
-        ListNode right = node.next;
-        left.val = right.val;
-        
-        while(right.next != null){
-            left = left.next;
-            right = right.next;
-            left.val = right.val;
-        }
-        left.next = null;
+        if(node == null) return ;
+        node.val = node.next.val;
+        node.next = node.next.next;
     }
 }
