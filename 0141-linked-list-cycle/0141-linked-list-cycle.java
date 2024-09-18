@@ -1,17 +1,11 @@
-//OPTIMISED - 2(TWO-POINTERS)
+//OPTIMISED - 1(CHANGING VALUES)
 
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        if(head == null) return false;
-        
-        ListNode slow = head;
-        ListNode fast = head;
-        
-        while(fast != null && fast.next != null){
-            fast = fast.next.next;
-             slow = slow.next;
-            
-            if(slow == fast) return true;
+        while(head != null){
+            if(head.val == Integer.MIN_VALUE) return true;
+            head.val = Integer.MIN_VALUE;
+            head = head.next;
         }
         
         return false;
