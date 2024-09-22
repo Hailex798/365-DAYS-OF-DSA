@@ -1,15 +1,24 @@
-//BF - 1(HASHING)
+//OPTIMISED - 1(HARE & TORTOISE)
 
 public class Solution {
     public ListNode detectCycle(ListNode head) {
-        HashSet<ListNode> set = new HashSet<>();
-        
-        while(head != null){
-            if(set.contains(head)) return head;
-            set.add(head);
-            head = head.next;
+        ListNode slow = head;
+        ListNode fast = head;
+    
+        while(fast != null && fast.next != null){            
+            fast = fast.next.next;
+            slow = slow.next;
+            
+            if(fast == slow){
+                slow = head;
+                while(slow != fast){
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+                return slow;
+            }
         }
         
-        return head;
+        return null;
     }
 }
