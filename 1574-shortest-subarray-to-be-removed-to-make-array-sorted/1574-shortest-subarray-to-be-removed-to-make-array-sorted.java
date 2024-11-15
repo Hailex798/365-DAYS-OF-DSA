@@ -1,3 +1,5 @@
+//OPTIMISED - 1(TWO-POINTER)
+
 class Solution {
     public int findLengthOfShortestSubarray(int[] arr) {
         int right = arr.length - 1;
