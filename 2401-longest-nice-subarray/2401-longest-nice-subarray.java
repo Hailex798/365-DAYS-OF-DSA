@@ -1,19 +1,24 @@
 class Solution {
     public int longestNiceSubarray(int[] nums) {
-        int maxNice = 1;
         int len = nums.length;
-        
+        int wstart = 0, wend = 0;
+        int maxNice = 0;
+        int bitMask = 0;
 
-        for(int i=0 ; i<len ; i++){
-            int max = 1;
-            int bitMask = nums[i];
-            for(int j=i+1 ; j<len ; j++){
-                  if((bitMask & nums[j]) != 0) break;
-
-                  bitMask |= nums[j];
-                  max++;
+        while(wend < len){
+            //Shifting the Window until, it does not satisfy the condn (no common value)
+            while((bitMask & nums[wend]) != 0){
+                bitMask ^= nums[wstart];
+                wstart++;
             }
-            maxNice = Math.max(maxNice, max);
+
+            //Updating current value to bitMask
+            bitMask |= nums[wend];
+            //Updating the length
+            maxNice = Math.max(maxNice, wend - wstart + 1);
+
+            //Shifting the Window forward
+            wend++;
         }
 
         return maxNice;
