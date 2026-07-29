@@ -22,4 +22,24 @@ TOPICS-WISE DSA QUESTIONS -->
 |  |
 | ------- |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
+## Hash Table
+|  |
+| ------- |
+| [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
+## Math
+|  |
+| ------- |
+| [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
+## String
+|  |
+| ------- |
+| [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
+## Combinatorics
+|  |
+| ------- |
+| [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
+## Counting
+|  |
+| ------- |
+| [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
 <!---LeetCode Topics End-->
