@@ -30,10 +30,12 @@ TOPICS-WISE DSA QUESTIONS -->
 |  |
 | ------- |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
+| [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 ## String
 |  |
 | ------- |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
+| [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 ## Combinatorics
 |  |
 | ------- |
@@ -42,4 +44,8 @@ TOPICS-WISE DSA QUESTIONS -->
 |  |
 | ------- |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
+## Greedy
+|  |
+| ------- |
+| [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 <!---LeetCode Topics End-->
