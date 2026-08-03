@@ -14,6 +14,7 @@ TOPICS-WISE DSA QUESTIONS -->
 |  |
 | ------- |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
+| [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
 ## Sorting
 |  |
 | ------- |
@@ -31,6 +32,7 @@ TOPICS-WISE DSA QUESTIONS -->
 | ------- |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
+| [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
 ## String
 |  |
 | ------- |
@@ -48,4 +50,20 @@ TOPICS-WISE DSA QUESTIONS -->
 |  |
 | ------- |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
+## Dynamic Programming
+|  |
+| ------- |
+| [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
+## Minimax
+|  |
+| ------- |
+| [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
+## Game Theory
+|  |
+| ------- |
+| [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
+## Zero-Sum Game
+|  |
+| ------- |
+| [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
 <!---LeetCode Topics End-->
