@@ -33,6 +33,7 @@ TOPICS-WISE DSA QUESTIONS -->
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 | [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
+| [1510-stone-game-iv](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1510-stone-game-iv) |
 ## String
 |  |
 | ------- |
@@ -54,16 +55,28 @@ TOPICS-WISE DSA QUESTIONS -->
 |  |
 | ------- |
 | [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
+| [1510-stone-game-iv](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1510-stone-game-iv) |
 ## Minimax
 |  |
 | ------- |
 | [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
+| [1510-stone-game-iv](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1510-stone-game-iv) |
 ## Game Theory
 |  |
 | ------- |
 | [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
+| [1510-stone-game-iv](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1510-stone-game-iv) |
 ## Zero-Sum Game
 |  |
 | ------- |
 | [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
+| [1510-stone-game-iv](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1510-stone-game-iv) |
+## Nim Game
+|  |
+| ------- |
+| [1510-stone-game-iv](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1510-stone-game-iv) |
+## Sprague–Grundy Theorem
+|  |
+| ------- |
+| [1510-stone-game-iv](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1510-stone-game-iv) |
 <!---LeetCode Topics End-->
