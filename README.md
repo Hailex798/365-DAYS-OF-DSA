@@ -15,6 +15,7 @@ TOPICS-WISE DSA QUESTIONS -->
 | ------- |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
 | [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
+| [2213-longest-substring-of-one-repeating-character](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/2213-longest-substring-of-one-repeating-character) |
 ## Sorting
 |  |
 | ------- |
@@ -39,6 +40,7 @@ TOPICS-WISE DSA QUESTIONS -->
 | ------- |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
+| [2213-longest-substring-of-one-repeating-character](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/2213-longest-substring-of-one-repeating-character) |
 ## Combinatorics
 |  |
 | ------- |
@@ -79,4 +81,12 @@ TOPICS-WISE DSA QUESTIONS -->
 |  |
 | ------- |
 | [1510-stone-game-iv](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1510-stone-game-iv) |
+## Segment Tree
+|  |
+| ------- |
+| [2213-longest-substring-of-one-repeating-character](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/2213-longest-substring-of-one-repeating-character) |
+## Ordered Set
+|  |
+| ------- |
+| [2213-longest-substring-of-one-repeating-character](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/2213-longest-substring-of-one-repeating-character) |
 <!---LeetCode Topics End-->
