@@ -16,6 +16,7 @@ TOPICS-WISE DSA QUESTIONS -->
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1464-maximum-product-of-two-elements-in-an-array) |
 | [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
 | [2213-longest-substring-of-one-repeating-character](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/2213-longest-substring-of-one-repeating-character) |
+| [3471-find-the-largest-almost-missing-integer](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3471-find-the-largest-almost-missing-integer) |
 ## Sorting
 |  |
 | ------- |
@@ -28,6 +29,7 @@ TOPICS-WISE DSA QUESTIONS -->
 |  |
 | ------- |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
+| [3471-find-the-largest-almost-missing-integer](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3471-find-the-largest-almost-missing-integer) |
 ## Math
 |  |
 | ------- |
