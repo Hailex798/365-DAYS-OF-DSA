@@ -17,6 +17,7 @@ TOPICS-WISE DSA QUESTIONS -->
 | [1406-stone-game-iii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1406-stone-game-iii) |
 | [2213-longest-substring-of-one-repeating-character](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/2213-longest-substring-of-one-repeating-character) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3471-find-the-largest-almost-missing-integer) |
+| [1386-cinema-seat-allocation](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1386-cinema-seat-allocation) |
 ## Sorting
 |  |
 | ------- |
@@ -30,6 +31,7 @@ TOPICS-WISE DSA QUESTIONS -->
 | ------- |
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3471-find-the-largest-almost-missing-integer) |
+| [1386-cinema-seat-allocation](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1386-cinema-seat-allocation) |
 ## Math
 |  |
 | ------- |
@@ -55,6 +57,7 @@ TOPICS-WISE DSA QUESTIONS -->
 |  |
 | ------- |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
+| [1386-cinema-seat-allocation](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1386-cinema-seat-allocation) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -91,4 +94,8 @@ TOPICS-WISE DSA QUESTIONS -->
 |  |
 | ------- |
 | [2213-longest-substring-of-one-repeating-character](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/2213-longest-substring-of-one-repeating-character) |
+## Bit Manipulation
+|  |
+| ------- |
+| [1386-cinema-seat-allocation](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1386-cinema-seat-allocation) |
 <!---LeetCode Topics End-->
