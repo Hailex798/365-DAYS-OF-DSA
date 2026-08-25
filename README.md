@@ -18,6 +18,7 @@ TOPICS-WISE DSA QUESTIONS -->
 | [2213-longest-substring-of-one-repeating-character](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/2213-longest-substring-of-one-repeating-character) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3471-find-the-largest-almost-missing-integer) |
 | [1386-cinema-seat-allocation](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1386-cinema-seat-allocation) |
+| [3718-smallest-missing-multiple-of-k](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3718-smallest-missing-multiple-of-k) |
 ## Sorting
 |  |
 | ------- |
@@ -32,6 +33,7 @@ TOPICS-WISE DSA QUESTIONS -->
 | [3518-smallest-palindromic-rearrangement-ii](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3518-smallest-palindromic-rearrangement-ii) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3471-find-the-largest-almost-missing-integer) |
 | [1386-cinema-seat-allocation](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/1386-cinema-seat-allocation) |
+| [3718-smallest-missing-multiple-of-k](https://github.com/Hailex798/365-DAYS-OF-DSA/tree/master/3718-smallest-missing-multiple-of-k) |
 ## Math
 |  |
 | ------- |
